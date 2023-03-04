@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import prismadb from "@/prisma/client";
 
 export async function GET(request: Request) {
   const movieCount = await prismadb.movie.count();

@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
+import prismadb from "@/prisma/client";
 
 // export async function GET(req: NextApiRequest, res: NextApiResponse) {
 //   const movies = prismadb.movie.findMany();
