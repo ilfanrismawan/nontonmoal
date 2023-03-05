@@ -1,3 +1,4 @@
+"use client";
 // import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
 import Link from "next/link";
