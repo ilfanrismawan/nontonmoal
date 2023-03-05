@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body {
+  @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600 !scrollbar !scrollbar-thumb-rounded-full h-full overflow-x-hidden bg-zinc-900 bg-[#141414] text-white;
+} */
+/* html, body, heading */
 body {
-  @apply h-full overflow-x-hidden bg-zinc-900;
+  @apply h-full overflow-x-hidden bg-zinc-900 !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600 !scrollbar-thumb-rounded-full  text-white;
 }
+header {
+  @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
+}
+/* .backgroundImage {
+  
+  @apply linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+} */
 
 #__next {
   @apply h-full;

@@ -2,8 +2,7 @@
 import useBillboard from "@/hooks/useBillboard";
 import { useRouter } from "next/navigation";
 import React from "react";
-
-import { AiOutlineInfoCircle } from "react-icons/ai";
+import InfoButton from "./InfoButton";
 import PlayButton from "./PlayButton";
 
 const Billboard = () => {
@@ -11,20 +10,23 @@ const Billboard = () => {
   const router = useRouter();
   const movieData = data?.response;
   return (
-    <div className="relative h-[56.25vs]">
+    <div className="relative h-[56.25vs]  space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
+      <div className="bg-gradient-to-t from-cyan-400 to-amber-300">
+
       <video
         autoPlay
-        className="h-[56.25vw] w-full object-cover brightness-[60%]"
+        className="absolute top-0 w-full gradient-to-b object-cover brightness-[60%]"
         loop
         muted
         poster={movieData?.thumbnailUrl}
         src={movieData?.videoUrl}
-      ></video>
-      <div className="absolute top-[30%] ml-4 md:top-[40%] md:ml-16">
-        <p className="h-full w-[50%] text-xl font-bold text-white drop-shadow-xl md:text-5xl lg:text-6xl">
+        ></video>
+        </div>
+      <div className="absolute top-[30%] ml-4 md:top-[30%] md:ml-16">
+        <p className="h-full w-[40%] text-xl font-bold text-white drop-shadow-xl md:text-5xl lg:text-6xl">
           {movieData?.title}
         </p>
-        <p className="mt-3 w-[90%] text-[8px] text-white drop-shadow-xl md:mt-8 md:w-[80%] md:text-lg lg:w-[50%]">
+        <p className="mt-3 w-[70%] text-[8px] text-white drop-shadow-xl md:mt-8 md:w-[80%] md:text-lg lg:w-[50%]">
           {movieData?.description}
         </p>
         <div
@@ -32,10 +34,7 @@ const Billboard = () => {
           className="mt-3 flex flex-row items-center gap-3 md:mt-4"
         >
           <PlayButton movieId={data?.id} />
-          <button className="flex w-auto flex-row items-center rounded-md bg-white bg-opacity-30 py-1 px-2 text-xs text-white transition hover:bg-opacity-20 md:py-2 md:px-4 lg:text-lg">
-            <AiOutlineInfoCircle className="mr-1" />
-            More Info
-          </button>
+          <InfoButton />
         </div>
       </div>
     </div>

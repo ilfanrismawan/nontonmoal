@@ -24,6 +24,7 @@ const MovieDetail = ({ title, description, video }: MovieDetailProps) => {
         </p>
       </nav>
       <video autoPlay controls className="h-full w-full" src={video}></video>
+      {/* <iframe src=""  frameborder="0"></iframe> */}
     </div>
   );
 };

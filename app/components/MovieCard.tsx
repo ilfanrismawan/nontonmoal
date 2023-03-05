@@ -9,15 +9,14 @@ interface MovieCardProps {
 const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
   return (
-    <div className="col-span group relative h-[12vw] bg-zinc-900">
+    <div className="col-span group relative h-[22vw] bg-zinc-900 md:h-[12vw]">
       <img
-        className="duration relative h-[12vw] w-full cursor-pointer rounded-md object-cover shadow-xl transition delay-300 group-hover:opacity-90 sm:group-hover:opacity-0"
+        className="duration relative h-[22vw] w-full cursor-pointer rounded-md object-cover shadow-xl transition delay-300 group-hover:opacity-90 sm:group-hover:opacity-0 md:h-[12vw]"
         src={data.thumbnailUrl}
         alt=""
+        onClick={() => router.push(`/watch/${data?.id}`)}
       />
-      <div className="absolute bg-amber-400 text-white">
-        <p>Bagke</p>
-      </div>
+
       <div className="invisible absolute top-0 z-10 w-full scale-0 opacity-0 transition delay-300 duration-200 group-hover:-translate-y-[6vw] group-hover:translate-x-[2vw] group-hover:scale-110 group-hover:opacity-100 sm:visible">
         <img
           className="duration h-[12vw] cursor-pointer rounded-t-md object-cover shadow-xl transition"
@@ -32,7 +31,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               onClick={() => router.push(`/watch/${data?.id}`)}
               className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-white transition hover:bg-neutral-300 lg:h-10 lg:w-10"
             >
-              <BsFillPlayFill size={30} />
+              <BsFillPlayFill color="black" size={30} />
             </div>
             <p className="text-white">{data.title}</p>
           </div>
@@ -47,10 +46,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="absolute bg-amber-400 text-white">
-        <p>TAI</p>
-        <p className="fixed text-white">Judul</p>
-      </div>
+     
     </div>
   );
 };

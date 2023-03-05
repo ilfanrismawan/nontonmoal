@@ -15,16 +15,15 @@ const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
   if (isEmpty(data)) return null;
 
   return (
-    <div className="mt-4 space-y-8 px-4 md:px-12">
-      <div>
-        <p className="text-md mb-4 font-semibold text-white md:text-xl">
-          {title}
-        </p>
-        <div className="grid grid-cols-4 gap-2">
-          {data?.response.map((movie: any) => (
-            <MovieCard key={movie.id} data={movie} />
-          ))}
-        </div>
+    <div className="px-4 md:px-12 md:py-2 md:top-[78vh] absolute bg-gradient-to-t from-zinc-900 ">
+      <h2 className="text-md relative mb-4 font-semibold text-white md:text-xl">
+        {title}
+      </h2>
+
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        {data?.response.map((movie: any) => (
+          <MovieCard key={movie.id} data={movie} />
+        ))}
       </div>
     </div>
   );
