@@ -4,10 +4,12 @@ import NavbarItem from "./NavbarItem";
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
 import MobileMenu from "./MobileMenu";
 import AccountMenu from "./AccountMenu";
+import { useRouter } from "next/navigation";
 
 const TOP_OFFSET = 66;
 
 function Navbar() {
+  const router = useRouter();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
@@ -41,14 +43,19 @@ function Navbar() {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         } flex flex-row items-center  py-6 px-4 transition duration-500 md:px-16`}
       >
-        <h1 className="text-2xl text-red-500">NontonMoal✨</h1>
+        <h1
+          className="cursor-pointer text-2xl text-red-500"
+          onClick={() => router.push("/")}
+        >
+          NontonMoal✨
+        </h1>
         <div className="ml-8 hidden flex-row gap-7 lg:flex">
-          {/* <NavbarItem label="Home" />
+          <NavbarItem label="Home" />
           <NavbarItem label="Series" />
           <NavbarItem label="Films" />
           <NavbarItem label="New & Popular" />
           <NavbarItem label="My List" />
-          <NavbarItem label="Browse by languages" /> */}
+          <NavbarItem label="Browse by languages" />
         </div>
         <div
           onClick={toggleMobileMenu}

@@ -1,16 +1,23 @@
+"use client";
 import MovieDetail from "@/app/components/MovieDetail";
-import getMovie from "@/hooks/getMovieDetail";
+import useMovie from "@/hooks/useMovie";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
-const Watch = async ({ params }: any) => {
-  const data = await getMovie(params);
-  const res = await data.results;
+const Watch = ({ params }: any) => {
+  // const datas = await getMovie(params);
+  // const res = await datas.results;
+
+  const query = useSearchParams();
+
+  const { data } = useMovie(params.movieId);
+  // console.log(data);
   return (
-    <main>
+    <main className="text-2xl text-white">
       <MovieDetail
-        title={res.title}
-        description={res.description}
-        video={res.videoUrl}
+        title={data?.results.title}
+        description={data?.results.description}
+        video={data?.results.videoUrl}
       ></MovieDetail>
     </main>
   );
