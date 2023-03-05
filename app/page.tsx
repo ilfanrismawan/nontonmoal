@@ -15,7 +15,6 @@ export default function Home() {
       <main className="relative pb-24 ">
         <Billboard />
 
- 
         <section className="pb-40 md:space-y-24 md:pt-44">
           <MovieList title="Trending Now" data={movies} />
         </section>
