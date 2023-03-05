@@ -21,8 +21,8 @@ const Billboard = () => {
           src={movieData?.videoUrl}
         ></video>
       </div>
-      <div className="absolute top-[60%] ml-4 md:top-[30%] md:ml-16">
-        <p className="h-full w-[60%] text-sm font-bold text-white drop-shadow-xl md:w-[40%] md:text-5xl lg:text-6xl">
+      <div className="absolute top-[60%] ml-4 md:top-[30%] md:ml-16 ">
+        <p className="h-full w-[60%] text-sm font-bold text-white drop-shadow-xl md:w-[40%] md:text-5xl  lg:w-[50%] lg:text-6xl">
           {movieData?.title}
         </p>
         <p className="mt-3 hidden w-[70%] text-[8px] text-white drop-shadow-xl sm:flex md:mt-8 md:w-[80%] md:text-lg lg:w-[50%]">
