@@ -1,15 +1,11 @@
 "use client";
-// import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-// import useAuth from "../hooks/useAuth";
 
 function NavigationBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
-  // const { logout } = useAuth();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
