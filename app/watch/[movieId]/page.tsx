@@ -13,7 +13,7 @@ const Watch = ({ params }: any) => {
   const { data } = useMovie(params.movieId);
   // console.log(data);
   return (
-    <main className="text-2xl text-white">
+    <main className="">
       <MovieDetail
         title={data?.results.title}
         description={data?.results.description}

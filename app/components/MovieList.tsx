@@ -15,7 +15,7 @@ const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
   if (isEmpty(data)) return null;
 
   return (
-    <div className="absolute bg-gradient-to-t from-zinc-900 px-4 md:top-[78vh] md:px-12 md:py-2 ">
+    <div className="absolute bg-gradient-to-t from-zinc-900 px-4 pt-20 md:top-[78vh] md:px-12 md:py-2 ">
       <h2 className="text-md relative mb-4 font-semibold text-white md:text-xl">
         {title}
       </h2>
