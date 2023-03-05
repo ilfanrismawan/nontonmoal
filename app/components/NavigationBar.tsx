@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 // import useAuth from "../hooks/useAuth";
 
-function NavBar() {
+function NavigationBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   // const { logout } = useAuth();
@@ -74,4 +74,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavigationBar;

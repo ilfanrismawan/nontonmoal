@@ -3,7 +3,7 @@ import useMoviesList from "@/hooks/useMoviesList";
 import Billboard from "./components/Billboard";
 import MovieList from "./components/MovieList";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
+import NavigationBar from "./components/NavigationBar";
 
 export default function Home() {
   const { data: movies = [] } = useMoviesList();
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="relative h-screen lg:h-[140vh]">
       {/* <Navbar /> */}
-      <NavBar />
+      <NavigationBar />
       <main className="relative pb-24 ">
         <Billboard />
 
