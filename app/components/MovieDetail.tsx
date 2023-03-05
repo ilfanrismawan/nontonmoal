@@ -8,8 +8,12 @@ interface MovieDetailProps {
   description: string;
   video: string;
 }
+
 const MovieDetail = ({ title, description, video }: MovieDetailProps) => {
   const router = useRouter();
+  const M = ()=>{
+    return <iframe src={video}></iframe>;}
+
   return (
     <div className="h-screen w-screen bg-black hover:opacity-100">
       <nav className="fixed z-10 flex w-full flex-row items-center gap-8 bg-black bg-opacity-70 p-4 opacity-0 transition delay-150 hover:opacity-100">
@@ -22,8 +26,9 @@ const MovieDetail = ({ title, description, video }: MovieDetailProps) => {
           <span className="font-light">Watching: </span>
           {title}
         </p>
+        <p className="text-red-600 cursor-pointer justify-end items-end " onClick={M}>M</p>
       </nav>
-      <video autoPlay controls className="h-full w-full" src={video}></video>
+      <iframe allowFullScreen className="h-full w-full" src={video}></iframe>
       {/* <iframe src=""  frameborder="0"></iframe> */}
     </div>
   );
