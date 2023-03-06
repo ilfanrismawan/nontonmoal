@@ -29,11 +29,14 @@ const Billboard = () => {
           {movieData?.description}
         </p>
         <div
-          onClick={() => router.push(`/watch/${movieData?.id}`)}
+          // onClick={() => router.push(`/watch/${movieData?.id}`)}
           className="mt-3 flex flex-row items-center gap-3 md:mt-4"
         >
-          <PlayButton movieId={data?.id} />
-          <InfoButton />
+          <PlayButton movieId={movieData?.id} />
+          <InfoButton
+            title={movieData?.title}
+            description={movieData?.description}
+          />
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         onClick={() => router.push(`/watch/${data?.id}`)}
       />
 
-      <div className="invisible absolute top-0 z-10 w-full scale-0 opacity-0 transition delay-300 duration-200 group-hover:-translate-y-[6vw] group-hover:translate-x-[2vw] group-hover:scale-110 group-hover:opacity-100 sm:visible">
+      <div className="invisible absolute top-0 z-10 w-full scale-0 opacity-0 transition delay-300 duration-200 group-hover:-translate-y-[6vw] group-hover:translate-x-[2vw] group-hover:scale-110 group-hover:opacity-100 sm:visible lg:p-4">
         <img
           className="duration h-[12vw] cursor-pointer rounded-t-md object-cover shadow-xl transition"
           src={data.thumbnailUrl}
@@ -46,7 +46,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           </div>
         </div>
       </div>
-     
     </div>
   );
 };

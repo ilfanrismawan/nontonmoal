@@ -5,13 +5,8 @@ import { useSearchParams } from "next/navigation";
 import React from "react";
 
 const Watch = ({ params }: any) => {
-  // const datas = await getMovie(params);
-  // const res = await datas.results;
-
-  const query = useSearchParams();
-
   const { data } = useMovie(params.movieId);
-  // console.log(data);
+
   return (
     <main className="">
       <MovieDetail

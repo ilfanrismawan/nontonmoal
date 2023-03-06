@@ -28,11 +28,38 @@ const MovieDetail = ({ title, description, video }: MovieDetailProps) => {
           {title}
         </p>
       </nav>
-      {(
-        <video autoPlay controls className="h-full w-full" src={video}></video>
-      ) || (
-        <iframe src={video} className="h-full w-full" allowFullScreen></iframe>
-      )}
+      <div className="h-full w-full">
+        <iframe
+          allow="autoplay fullscreen"
+          allowFullScreen
+          className="h-full w-full"
+          src={video}
+        ></iframe>
+      </div>
+      <div className="flex flex-row items-center justify-between p-16">
+        <div className="flex flex-col">
+          <h1 className="font-serif font-bold text-red-600">
+            Judul:
+            <span className="pl-1 font-sans font-normal text-white">
+              {title}
+            </span>
+          </h1>
+          <p className="font-serif font-bold text-red-600">
+            Sinopsis:
+            <span className="pl-1 font-sans font-normal text-white">
+              {description}
+            </span>
+          </p>
+        </div>
+        <div className="flex flex-col space-y-2">
+          <button className="rounded bg-red-600 py-2 px-5 hover:bg-red-700 active:bg-red-800">
+            Server 1
+          </button>
+          <button className="rounded bg-red-600 py-2 px-5 hover:bg-red-700 active:bg-red-800">
+            Server 2
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

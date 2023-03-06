@@ -103,7 +103,7 @@ const Auth = () => {
                 onClick={() => signIn("github", { callbackUrl: "/" })}
                 className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white transition hover:opacity-80"
               >
-                <FaGithub size={30} />
+                <FaGithub color="black" size={30} />
               </div>
             </div>
             <p className="mt-12 text-neutral-500">
