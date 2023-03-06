@@ -16,7 +16,7 @@ const InfoButton = ({ title, description }: any) => {
     <>
       <button
         onClick={openModal}
-        className="flex w-auto flex-row items-center rounded-md bg-white bg-opacity-30 py-2 px-3 text-xs text-white transition hover:bg-opacity-20 md:py-2 md:px-4 lg:text-lg"
+        className="flex w-auto flex-row items-center rounded-md bg-white bg-opacity-30 py-2 px-3 text-xs text-white transition hover:bg-opacity-20 active:bg-opacity-10 md:py-2 md:px-4 lg:text-lg"
       >
         <AiOutlineInfoCircle className="mr-1" />
         More Info
@@ -60,7 +60,7 @@ const InfoButton = ({ title, description }: any) => {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 hover:bg-blue-200"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 hover:bg-blue-200 active:bg-blue-400"
                       onClick={closeModal}
                     >
                       Got it, thanks!
